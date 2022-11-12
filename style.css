@@ -16,13 +16,13 @@
                 --border-basic:#000 3px solid;
                 --border-basic-radius: 20px;
             }
-            *{
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: 'Gauon Dodum', 'Jua', sans-serif;
-                border: var(--border-basic);
-                border-radius: var(--border-basic-radius);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gauon Dodum', 'Jua', sans-serif;
+    /* border: var(--border-basic); */
+    border-radius: var(--border-basic-radius);
 }
 
 html{
@@ -34,32 +34,52 @@ body{
     padding: .8em .5em;
     text-align: center;
 }
+#main{
+    /* background-color: var(--bg-clr-printview); */
+    width: 100%;height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 #kota{
     /* width: 100%; */
-    padding: .5em .5em .5em .2em;
-    /* border: var(--border-basic);
-    border-radius: var(--border-basic-radius); */
-    
+    padding: 1.5em .5em 1.3em .2em;
 }
 #kota h1{
     font-size: 3rem;
     text-align: center;
     font-weight: bold;
-    
-    /* border-radius: var(--border-basic-radius);
-    border: var(--border-basic); */
+    /* letter-spacing: 10px; */
 }
 
 #s1 {
-    /* border-radius: var(--border-basic-radius);
-    border: var(--border-basic); */
-    
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 3px;
+    padding: 0 .5em .5em .2em;
+}
+#s1-date-span{
+    position: relative;
+    top: -.4rem;
+    font-size: 6rem;
+}
+#s1-time-kr,
+#s1-time-kk{
+    position: relative;
+    top: -1rem;
+    display: flex;
     flex-direction: row;
-    padding: .5em .5em .5em .2em;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    gap: 10px; 
+}
+.s1-time-plag{
+    font-size: 1rem;
 }
 #s2 {
-    border-radius: var(--border-basic-radius);
-    border: var(--border-basic);
+    width: 100%;height: 100%;
+    padding: .5em .5em .5em .2em;
 }
