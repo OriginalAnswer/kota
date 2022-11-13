@@ -20,9 +20,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Gauon Dodum', 'Jua', sans-serif;
+    font-family: 'Bodoni Moda', 'Gauon Dodum', 'Jua', sans-serif,serif;
     /* border: var(--border-basic); */
-    border-radius: var(--border-basic-radius);
+    /* border-radius: var(--border-basic-radius); */
 }
 
 html{
@@ -40,16 +40,42 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
-#kota{
-    /* width: 100%; */
-    padding: 1.5em .5em 1.3em .2em;
+#main-s1,
+#main-s1-where,
+#main-s1-where >p,
+#main-s2{
+    width: 100%;
+    display: block;
 }
-#kota h1{
-    font-size: 3rem;
-    text-align: center;
+#main-s1-howlong,
+#main-s1-thistime{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+#main-s1-where{
+    border-top: 1px solid #000;
+    border-bottom: 5px solid #000;
+}
+#main-s1-where p:nth-child(1){
+    font-family: serif;
+    font-size: 4rem;
+    text-align: left;
     font-weight: bold;
-    /* letter-spacing: 10px; */
+    /* letter-spacing: 3rem; */
+    /* text-indent:1.5rem; */
+}
+#main-s1-where p:nth-last-child(1){
+    font-family: 'Forum';
+    font-size: 3.5rem;
+    text-align: right;
+    font-weight:lighter;
+    /* letter-spacing: .8rem; */
+    /* text-indent: .4rem; */
 }
 
 #s1 {
