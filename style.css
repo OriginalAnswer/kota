@@ -109,11 +109,11 @@ body{
 }
 
 /*  */
-#main-s1,
+/* #main-s1,
 #main-s2,
 #main-s3{
-    /* border: 1px solid #000; */
-}
+    border: 1px solid #000;
+} */
 #main-s3{
     width: 100%;
     display: flex;
