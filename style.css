@@ -60,12 +60,6 @@ body{
     flex-wrap: nowrap;
     justify-content:space-between;
 }
-#main-s1-thistime{
-    font-size: 1.15rem;
-}
-#main-s1-thistime span:nth-child(2){
-    text-indent: 1em;
-}
 #main-s1-where{
     border-top: 1px solid #000;
     border-bottom: 5px solid #000;
@@ -99,12 +93,19 @@ body{
         letter-spacing: .5rem;
     }
 }
+#main-s1-thistime{
+    font-size: 1.15rem;
+}
+#main-s1-thistime span:nth-child(2){
+    text-indent: 1em;
+}
+
 
 /*  */
 #main-s2{
     width: 100%;
     height: 100%;
-    /* margin-bottom: 0px; */
+    margin-bottom:10px;
     /* padding: 0 5px; */
 }
 #main-s2-boxing{
@@ -123,39 +124,58 @@ body{
 }
 
 /*  */
-
+#main-s1,
+#main-s2,
+#main-s3{
+    /* border: 1px solid #000; */
+}
 #main-s3{
     width: 100%;
-    padding: 3px 0px 30px 0px;
-    position: fixed;
-    bottom: 0;
     display: flex;
     justify-content: center;
     background-color: white;
-    border-top: 4px solid #000;
-    border-radius: 0px;
-    display: none;
 }
 #main-s3-boxing{
     display: block;
+    width: 100%;
 }
-#main-s3-menus{
-    display: flex;
-}
-#main-s3-x{
+/*#main-s3-x{
     width: 100%;
     margin-bottom: 10px;
+} */
+#main-s3-menus{
+    display: block;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
 }
-.main-s3-menus{
-    margin: 5px;
-    border: 2px dashed #000;
-    border-radius: 18px;
-    padding: 10px;
+#main-s3-menus section{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 2%;
+}
+.main-s3-menus-items{
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: 25px;
+    /* padding: 10px 50px; */
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Forum';
+    font-size: 1.2rem;
+    font-weight: bold;
 }
-
+.main-s3-menus-items:hover{
+    background-color: #000;
+    color: #ffffff;
+    font-weight:normal;
+}
 
 /* 로그인 */
 #main-login{
@@ -184,7 +204,6 @@ body{
     text-transform: uppercase;
 }
 .main-login-menus{
-    /* margin: 5px; */
     padding: 10px;
     display: flex;
     justify-content: center;
