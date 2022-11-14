@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif,'Bodoni Moda', 'Gauon Dodum', 'Jua', serif;
+    font-family: sans-serif,'Bodoni Moda', 'Gauon Dodum', 'Jua','Forum', serif;
     /* border: var(--border-basic); */
     /* border-radius: var(--border-basic-radius); */
 }

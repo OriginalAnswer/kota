@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Forum&Bodoni+Moda&Gowun+Dodum&family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./checklist2.css">
+    <title>kota checklist2</title>
+</head>
+<body>
+    <div class="todo">
+        <form id="todo-form">
+            <input id="todo-input" type="text" placeholder="Create a new check list..." required>
+        </form>
+        <div id="todos">
+            <div id="todo-list"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+        //todo------------------------------------------------------
+        //submit
+        //save
+        //delete
+        //print
+        const todoInput = document.querySelector('#todo-input');
+        const todoForm = document.querySelector('#todo-form');
+        const todoList = document.querySelector('#todo-list');
+        const TODOS_KEY = 'check list';
+        let todosArr = [];
+        function saveTodo(){
+            localStorage.setItem(TODOS_KEY, JSON.stringify(todosArr));
+        }
+        function deleteTodo(e){
+            const li = event.target.parentElement;
+            li.remove();
+            todosArr = todosArr.filter(a => a.id !== parseInt(li.id));
+            saveTodo();
+        }
+        function todoSubmit(e){
+            e.preventDefault();
+            const newtodo = todoInput.value;
+            todoInput.value = "";
+            const newtodoObj = {
+                text:newtodo,
+                id:Date.now(),
+            }
+            todosArr.push(newtodoObj);
+            printTodo(newtodoObj);
+            saveTodo();
+        }
+        
+        function printTodo(n){
+            const li = document.createElement('div');
+            li.id = n.id;
+            li.classList.add('li');
+            const span = document.createElement('span');
+            span.innerText = n.text;
+            const btn = document.createElement('i');
+            btn.classList.add('fas', 'fa-times');
+            btn.addEventListener("click", deleteTodo);
+            li.appendChild(span);
+            li.appendChild(btn);
+            todoList.appendChild(li);
+        }
+        todoForm.addEventListener('submit', todoSubmit);
+        const savedTodo = localStorage.getItem(TODOS_KEY);
+        if(savedTodo !== null){
+            const parsedTodos = JSON.parse(savedTodo);
+            todos = parsedTodos;
+            parsedTodos.forEach(printTodo);
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/e4704dcbbd.js" crossorigin="anonymous"></script>
+</body>
+</html>
