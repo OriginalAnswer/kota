@@ -67,8 +67,10 @@
             li.classList.add('li');
             const span = document.createElement('span');
             span.innerText = n.text;
-            const btn = document.createElement('i');
-            btn.classList.add('fas', 'fa-times');
+            const btn = document.createElement('span');
+            // btn.classList.add('fas', 'fa-times');
+            btn.classList.add('delete-btn');
+            btn.innerText = 'x';
             btn.addEventListener("click", deleteTodo);
             li.appendChild(span);
             li.appendChild(btn);
