@@ -4,6 +4,7 @@
     padding: 15px 20px;
     border: 1px solid;
     overflow:scroll;
+    display: none;
 }
 .rate-days{
     padding: 15px 20px;
