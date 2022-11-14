@@ -98,14 +98,20 @@ body{
     padding: 15px 20px;
     border: 1px solid #000;
     border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-#main-s2-dday{
+#main-s2-header{
     margin-bottom: 10px;
 }
-#main-s2-dday span{
+#main-s2-header span{
     margin-bottom: 10px;
     font-family: 'Jua';
     font-size: 1.5rem;
+}
+#main-s2-footer{
+    font-size: .5rem;
 }
 
 /*  */

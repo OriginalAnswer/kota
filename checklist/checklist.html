@@ -4,32 +4,81 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Jua&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="checklist.css">
-    <title>kota</title>
+    <link href="https://fonts.googleapis.com/css2?family=Forum&Bodoni+Moda&Gowun+Dodum&family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./checklist.css">
+    <title>kota checklist</title>
 </head>
 <body>
-    
-    <form id="todo-form">
-        <div id="todo-input-container">
-            <input type="text" id="todo-input" placeholder="Create a new check list..." required>
+    <div class="todo">
+        <form id="todo-form">
+            <input id="todo-input" type="text" placeholder="Create a new check list..." required>
+        </form>
+        <div id="todos">
+            <div id="todo-list"></div>
         </div>
-    </form>
+    </div>
 
-    <div id="print-view"></div>
+    <script type="text/javascript">
 
-<!-- ------------------------------------------------------------------------------------------------- -->
-    <script type="module" src="./checklist.js"></script>
-    <script type="module" src="./firebase.js"></script>
+        //todo------------------------------------------------------
+        //submit
+        //save
+        //delete
+        //print
+        const todoInput = document.querySelector('#todo-input');
+        const todoForm = document.querySelector('#todo-form');
+        const todoList = document.querySelector('#todo-list');
+
+        const TODOS_KEY = 'check list';
+        let todosArr = [];
+        const savedTodo = localStorage.getItem(TODOS_KEY);
+        
+        if(savedTodo !== null){
+            const parsedTodos = JSON.parse(savedTodo);
+            todos = parsedTodos;
+            todosArr = todos; //새로고침 해결부분!!!!
+            parsedTodos.forEach(printTodo);
+        }
+        function saveTodo(){
+            localStorage.setItem(TODOS_KEY, JSON.stringify(todosArr));
+        }
+        function deleteTodo(e){
+            const li = event.target.parentElement;
+            li.remove();
+            todosArr = todosArr.filter(a => a.id !== parseInt(li.id));
+            saveTodo();
+        }
+        function todoSubmit(e){
+            e.preventDefault();
+            const newtodo = todoInput.value;
+            todoInput.value = "";
+            const newtodoObj = {
+                text:newtodo,
+                id:Date.now(),
+            }
+            todosArr.push(newtodoObj);
+            printTodo(newtodoObj);
+            saveTodo();
+        }
+        
+        function printTodo(n){
+            const li = document.createElement('div');
+            li.id = n.id;
+            li.classList.add('li');
+            const span = document.createElement('span');
+            span.innerText = n.text;
+            const btn = document.createElement('i');
+            btn.classList.add('fas', 'fa-times');
+            btn.addEventListener("click", deleteTodo);
+            li.appendChild(span);
+            li.appendChild(btn);
+            todoList.appendChild(li);
+        }
+
+        todoForm.addEventListener('submit', todoSubmit);
+
+        
+    </script>
+    <script src="https://kit.fontawesome.com/e4704dcbbd.js" crossorigin="anonymous"></script>
 </body>
 </html>
-
-
-
-<!-- .title"할 일 목록"
-form#todo-form
->input#todo-input(type="text" placeholder="Create a todo list..." required) 
-+ button#btn-todo-save"save";
-
-#print-view>.single-todo-container > span +  .delete-btn"Delete";-->
-
