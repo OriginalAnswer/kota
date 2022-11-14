@@ -6,9 +6,7 @@
     /* border: var(--border-basic); */
     /* border-radius: var(--border-basic-radius); */
 }
-.dp-none{
-    display: none;
-}
+
 input[type="radio"]{
     /* display: none; */
 }
@@ -175,9 +173,14 @@ body{
     cursor: pointer;
 }
 
-#name{
+/* #name{
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
+} */
+
+/*  */
+.dp-none{
+    display: none;
 }
