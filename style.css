@@ -1,5 +1,5 @@
-@import url(/rate.css);
 @import url(/checklist/checklist.css);
+@import url(/rate.css);
 :root{
     --bg-clr-white: #ffffff;
     --bg-clr-main: rgb(255, 255, 255);

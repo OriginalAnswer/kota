@@ -5,9 +5,9 @@ const clForm = document.getElementById('cl-form');
 
 
 import { 
-    savecl,
-    onGetcl, 
-    deletecl 
+    saveCL,
+    onGetCL, 
+    deleteCL 
 } from './firebase.js'
 
 
