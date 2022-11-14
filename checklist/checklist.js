@@ -1,25 +1,25 @@
 // --------------레퍼런스-------------------------------------------------------------------------------
 const printView = document.getElementById('print-view');
-const clForm = document.getElementById('cl-form');
+const todoForm = document.getElementById('todo-form');
 // ---------------------------------------------------------------------------------------------
 
 
 import { 
-    saveCL,
-    onGetCL, 
-    deleteCL 
+    saveTodo,
+    onGetTodo, 
+    deleteTodo 
 } from './firebase.js'
 
 
 window.addEventListener('DOMContentLoaded', async () => {
 
-    onGetCL((querySnapshot) => {
+    onGetTodo((querySnapshot) => {
         let html = '';
         querySnapshot.forEach(doc => {
-            const clInfo = doc.data();
+            const todoInfo = doc.data();
             html += `
-                <div class="single-cl-container">
-                <span>${clInfo.text}</span>
+                <div class="single-todo-container">
+                <span>${todoInfo.text}</span>
                 <button class="delete-btn" data-id="${doc.id}">Delete</button>
                 </div>
             `
@@ -29,16 +29,16 @@ window.addEventListener('DOMContentLoaded', async () => {
         const deleteBtns = document.querySelectorAll('.delete-btn');
         deleteBtns.forEach(btn => {
             btn.addEventListener("click", ({target:{dataset}}) => {
-                deleteCL(dataset.id)
+                deleteTodo(dataset.id)
             })
         })
 
     });
 });
 
-clForm.addEventListener('submit', (e) => {
+todoForm.addEventListener('submit', (e) => {
     e.preventDefault()
-    const clInput = clForm['cl-input']
+    const todoInput = todoForm['todo-input']
     const date = new Date();
     const y = date.getFullYear();
     const m = date.getMonth()+1;
@@ -48,6 +48,6 @@ clForm.addEventListener('submit', (e) => {
     const sc = String(date.getSeconds()).padStart(2,"0");
     let createTime = y+m+d+hr+mn+sc; 
     const statu = "active";
-    saveCL(clInput.value,statu,createTime);
-    clForm.reset();
+    saveTodo(todoInput.value,statu,createTime);
+    todoForm.reset();
 })

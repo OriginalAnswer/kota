@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="checklist.css">
+    <title>kota</title>
+</head>
+<body>
+    
+    <form id="todo-form">
+        <div id="todo-input-container">
+            <input type="text" id="todo-input" placeholder="Create a new check list..." required>
+        </div>
+    </form>
+
+    <div id="print-view"></div>
+
+<!-- ------------------------------------------------------------------------------------------------- -->
+    <script type="module" src="./checklist.js"></script>
+    <script type="module" src="./firebase.js"></script>
+</body>
+</html>
+
+
+
+<!-- .title"할 일 목록"
+form#todo-form
+>input#todo-input(type="text" placeholder="Create a todo list..." required) 
++ button#btn-todo-save"save";
+
+#print-view>.single-todo-container > span +  .delete-btn"Delete";-->
+

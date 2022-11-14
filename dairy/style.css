@@ -1,0 +1,206 @@
+@import url(/checklist/checklist.css);
+@import url(/rate.css);
+:root{
+    --bg-clr-white: #ffffff;
+    --bg-clr-main: rgb(255, 255, 255);
+    --bg-clr-form: rgb(137, 160, 139);
+    --bg-clr-title:rgb(105, 185, 112);
+    --bg-clr-printview: rgb(194, 241, 198);
+    --bg-clr-singletodo: rgb(225, 241, 194);
+    --clr: #000;
+    --clr-title: #2382ff;
+    --clr-input-placeholder:#2382ffc4;
+    --boxShadow:5px 5px 10px #e0e0e0,
+                -5px -5px 10px #ffffff;
+                --boxShadow-inset:inset 5px 5px 10px #e0e0e0,
+                inset -5px -5px 10px #ffffff;
+                --border-radius: 50px;
+                --border-basic:#000 3px solid;
+                --border-basic-radius: 20px;
+            }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif,'Bodoni Moda', 'Gauon Dodum', 'Jua', serif;
+    /* border: var(--border-basic); */
+    /* border-radius: var(--border-basic-radius); */
+}
+
+html{
+    width: 100vw;height: 100vh;
+}
+body{
+    width: 100%;height: 100%;
+    background-color: var(--bg-clr-main);
+    padding: .8em .5em;
+    text-align: center;
+}
+.dairy{
+    width: 100%;height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    padding: 10px;
+}
+#dairy-s1{
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+#dairy-s1,
+#dairy-s1-header,
+#dairy-s1-header >p{
+    width: 100%;
+    display: block;
+}
+#dairy-s1-nav{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content:space-between;
+}
+#dairy-s1-header{
+    border-top: 1px solid #000;
+    border-bottom: 5px solid #000;
+}
+#dairy-s1-header p:nth-child(1){
+    font-family: serif;
+    font-size: 6.5rem;
+    text-align: left;
+    font-weight: bold;
+    letter-spacing: 1.2rem;
+}
+
+/* 메인폰트 미쿼리 사이즈 */
+@media screen and (max-width: 380px) {
+    #dairy-s1-header p:nth-child(1){
+        font-size: 5rem;
+        text-align: center;
+        letter-spacing: 0rem;
+    }
+    /* #dairy-s1-header p:nth-last-child(1){
+        font-size: 3rem;
+        text-align: center;
+        letter-spacing: .5rem;
+    } */
+}
+#dairy-s1-nav{
+    font-size: 1.15rem;
+}
+#dairy-s1-nav span:nth-child(2){
+    text-indent: 1em;
+}
+
+
+/*  */
+#main-s2{
+    width: 100%;
+    height: 100%;
+    margin-bottom:10px;
+    /* padding: 0 5px; */
+}
+#main-s2-boxing{
+    height: 100%;
+    padding: 15px 20px;
+    border: 1px solid #000;
+    border-radius: 50px;
+}
+#main-s2-dday{
+    margin-bottom: 10px;
+}
+#main-s2-dday span{
+    margin-bottom: 10px;
+    font-family: 'Jua';
+    font-size: 1.5rem;
+}
+
+/*  */
+#main-s1,
+#main-s2,
+#main-s3{
+    /* border: 1px solid #000; */
+}
+#main-s3{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+#main-s3-boxing{
+    display: block;
+    width: 100%;
+}
+/*#main-s3-x{
+    width: 100%;
+    margin-bottom: 10px;
+} */
+#main-s3-menus{
+    display: block;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+#main-s3-menus section{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 2%;
+}
+.main-s3-menus-items{
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: 25px;
+    /* padding: 10px 50px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Forum';
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.main-s3-menus-items:hover{
+    background-color: #000;
+    color: #ffffff;
+    font-weight:normal;
+}
+
+/* 로그인 */
+#main-login{
+    width: 100%;
+    padding: 3px 0px 30px 0px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-top: 4px solid #000;
+    border-radius: 0px;
+    /* display: none; */
+}
+#main-login-boxing{
+    display: block;
+}
+#main-login-menus{
+    display: flex;
+}
+#main-login-x{
+    width: 100%;
+    margin-bottom: 10px;
+}
+#main-login-x p {
+    text-transform: uppercase;
+}
+.main-login-menus{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: #000 1px solid;
+    border-left: #000 1px solid;
+}

@@ -45,9 +45,12 @@
                         <div class="main-s3-menus-items" id="main-s3-rate">RATE</div>
                     </section>
                     <section>
-                        <div class="main-s3-menus-items" id="main-s3-check">CHECK<br>LIST</div>
+                        <div class="main-s3-menus-items" id="main-s3-check">
+                            CHECK<br>LIST
+                        </div>
                         <div class="main-s3-menus-items" id="main-s3-chat">CHAT</div>
                     </section>
+                    <a href="/checklist/checklist.html" target="_self">/checklist/checklist.html</a>
                 </div>
             </div>
         </section>
@@ -102,47 +105,5 @@
             </div>
         </div>
     </div>
-    <div id="cl">
-        <form id="cl-form">
-            <div id="cl-input-container">
-                <input type="text" id="cl-input" placeholder="type here." required>
-                <i class="fas fa-arrow-down"id="btn-cl-save"></i>
-            </div>
-        </form>
-    
-        <div id="print-view"></div>
-    </div>
-
-    <script src="/indextime.js"></script>
-    <script src="/checklist/checklist.js"></script>
-    <script type="module" src="/firebase.js"></script>
-
-    <!-- <script type="text/javascript">
-        // const mArr = new Array('Jan','Feb','Mar','Apr','May','Jun','July','Aug','Sep','Oct','11','Dec');
-const mainDate = document.getElementById('main-s1-thistime-date');
-const mainDay = document.getElementById('main-s1-thistime-day');
-const wArr = new Array('SUN','MON','TUE','WED','THU','FRI','SAT');
-function getDateMain(){
-    const date = new Date();
-    const d = String(date.getDate());
-    const dy = String(date.getDay());
-    mainDate.innerText = `${d}`;
-    mainDay.innerText = `${wArr[dy]}`;
-};
-getDateMain();
-//로컬타임 기본하나일 때
-const tt = document.getElementById('main-s1-thistime-time');
-function getThistime(){
-    const date = new Date();
-    // var kota_offset = 4*60;//로컬 +4시간 세팅 (한국기준 코타키나발루 시간)
-    // var kota_offset = -(4*60); //로컬 -4시간 세팅
-    // date.setMinutes(date.getMinutes()+kota_offset);
-    const h = String(date.getHours()).padStart(2,"0");
-    const m = String(date.getMinutes()).padStart(2,"0");
-    // const s = String(date.getSeconds()).padStart(2,"0");
-    tt.innerText = `${h}:${m}`;
-};
-setInterval(getThistime, 1000);
-    </script> -->
 </body>
 </html>
