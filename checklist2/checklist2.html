@@ -28,8 +28,17 @@
         const todoInput = document.querySelector('#todo-input');
         const todoForm = document.querySelector('#todo-form');
         const todoList = document.querySelector('#todo-list');
+
         const TODOS_KEY = 'check list';
         let todosArr = [];
+        const savedTodo = localStorage.getItem(TODOS_KEY);
+        
+        if(savedTodo !== null){
+            const parsedTodos = JSON.parse(savedTodo);
+            todos = parsedTodos;
+            todosArr = todos;
+            parsedTodos.forEach(printTodo);
+        }
         function saveTodo(){
             localStorage.setItem(TODOS_KEY, JSON.stringify(todosArr));
         }
@@ -65,13 +74,10 @@
             li.appendChild(btn);
             todoList.appendChild(li);
         }
+
         todoForm.addEventListener('submit', todoSubmit);
-        const savedTodo = localStorage.getItem(TODOS_KEY);
-        if(savedTodo !== null){
-            const parsedTodos = JSON.parse(savedTodo);
-            todos = parsedTodos;
-            parsedTodos.forEach(printTodo);
-        }
+
+        
     </script>
     <script src="https://kit.fontawesome.com/e4704dcbbd.js" crossorigin="anonymous"></script>
 </body>
