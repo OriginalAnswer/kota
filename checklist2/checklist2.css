@@ -29,7 +29,7 @@ button{
 .todo{
     width: 100%;
     height: 100%;
-    padding: .8em .5em;
+    padding: 1em .5em .8em .5em;
     font-family: 'Gauon Dodum', 'Jua';
 }
 #todo-form{
@@ -39,6 +39,7 @@ button{
     align-items: center;
     padding: 0 1.5em;
     border-bottom: 2px solid #000;
+    margin-bottom: .5em;
 }
 #todo-input{
     width: 100%;
