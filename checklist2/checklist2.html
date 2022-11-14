@@ -36,7 +36,7 @@
         if(savedTodo !== null){
             const parsedTodos = JSON.parse(savedTodo);
             todos = parsedTodos;
-            todosArr = todos;
+            todosArr = todos; //새로고침 해결부분!!!!
             parsedTodos.forEach(printTodo);
         }
         function saveTodo(){
