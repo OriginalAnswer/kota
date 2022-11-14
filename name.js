@@ -28,3 +28,7 @@ function Name5(){
     n.style.display = 'none'
     scd.classList.remove('dp-none');
 }
+if(savedName !== null){
+    n.style.display = 'none';
+    scd.classList.remove('dp-none');
+}
