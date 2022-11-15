@@ -47,11 +47,11 @@ button{
 .chat{
     width: 100%;
     height: calc(100% - 70px);
-    border-radius: 50px;
     display: flex;
     align-items: center;
     padding: 1em .5em;
     margin-bottom: .5em;
+    border-radius: 50px;
 }
 
 #type-form{
@@ -59,8 +59,8 @@ button{
     display: flex;
     align-items: center;
     margin-bottom: .5em;
-    border: 1px solid #000;
-    border-radius: 50px;
+    /* border: 1px solid #000;
+    border-radius: 50px; */
 }
 #type-input{
     width: 100%;
@@ -72,8 +72,6 @@ button{
 }
 
 .chats{
-    border: 1px solid #000;
-    border-radius: 50px;
     background-color: white;
     width: 100%;
     height: 100%;
@@ -81,6 +79,8 @@ button{
     align-items: flex-end;
     flex-direction: column-reverse;
     overflow: scroll;
+    /* border: 1px solid #000;
+    border-radius: 50px; */
 }
 #single-chat{
     background-color:chartreuse ;
@@ -88,10 +88,17 @@ button{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 10px;
 }
 .chat-name,
 .chat-time{
-    font-family: sans-serif;
+    font-family: 'Jua';
     font-size: 10px;
     color: rgb(110, 110, 110);
+}
+.chat-text{
+    background: #fff;
+    font-size: 20px;
+    margin: 0 5px 0 0;
+    font-family: 'Jua';
 }
