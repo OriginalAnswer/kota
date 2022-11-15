@@ -53,26 +53,29 @@ const chatTime = document.getElementById('#chat-time');//Single chat 시간
 // todoForm.addEventListener('submit', todoSubmit);
 
 const typeForm = document.getElementById('type-form');
-const typeInput = document.getElementById('type-input');
 const chatView = document.getElementById('chats');
 const savedName = localStorage.getItem(NAME);
 
 //이름 내용 시간 when
-import { saveChat, printChat }from '../firebaseComfig.js';
+import { saveChat, printChat }from './firebaseComfig.js';
 
-printChat((querySnapshot) => {
-    let html = '';
-    querySnapshot.forEach(doc => {
-        const todoInfo = doc.data();
-        html += `
-            <div class="single-todo-container">
-            <span>${todoInfo.text}</span>
-            <button class="delete-btn" data-id="${doc.id}">Delete</button>
+window.addEventListener('DOMContentLoaded', async () => {
+    printChat((querySnapshot) => {
+        let html = '';
+        querySnapshot.forEach(doc => {
+            const chatInfo = doc.data();
+            html += `
+            <div class="single-chat" id="single-chat">
+                <div class="chat-name" id="chat-name">${chatInfo.name}</div>
+                <div>
+                    <span class="chat-text" id="chat-text">${chatInfo.text}</span>
+                    <span class="chat-time" id="chat-time">${chatInfo.time}</span>
+                </div>
             </div>
-        `
+            `
+        });
+        chatView.innerHTML = html;
     });
-    chatView.innerHTML = html;
-
 });
 
 typeForm.addEventListener('submit', (e) => {
