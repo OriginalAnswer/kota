@@ -1,5 +1,14 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore } from 'firebase/firestore';
+import { getFirestore,
+  getFirestore,
+  collection,
+  // /addDoc,
+  setDoc,
+  // getDocs,
+  onSnapshot,
+  deleteDoc,
+  doc} 
+from 'firebase/firestore';
 
 const firebaseConfig = {
   apiKey: "AIzaSyDHpjPdzK9-sJNpB4FM6ukRLFhD_EXHxGo",
@@ -12,3 +21,7 @@ const firebaseConfig = {
 
 export const app = initializeApp(firebaseConfig);
 export const database = getFirestore(app);
+
+// 채팅
+export const saveChat = (name, text, time, when) => setDoc(doc(db, "채팅", when), {name, text, time, when});
+export const onGetTodo = (callback) => onSnapshot(collection(db, '채팅'), callback);
