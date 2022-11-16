@@ -222,6 +222,4 @@ body{
 
 
 /*  */
-.dp-none{
-    display: none;
-}
+.hidden{display: none;}
