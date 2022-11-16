@@ -70,7 +70,7 @@ header{
 /* 메인폰트 미쿼리 사이즈 */
 @media screen and (max-width: 380px) {
     #title p:nth-child(1){
-        font-size: 5rem;
+        font-size: 4rem;
         text-align: center;
         letter-spacing: 0rem;
     }

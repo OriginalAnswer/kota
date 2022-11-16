@@ -6,7 +6,7 @@
     /* border: var(--border-basic); */
     /* border-radius: var(--border-basic-radius); */
 }
-.hidden{display: none;}
+
 html{
     width: 100vw;height: 100vh;
 }
@@ -87,3 +87,8 @@ article{
     /* font-family: 'Jua'; */
     font-size: 1.2rem;
 }
+
+
+
+/*  */
+.hidden{display: none;}
