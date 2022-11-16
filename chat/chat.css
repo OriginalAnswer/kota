@@ -40,8 +40,7 @@ button{
     height: calc(100% - 90px);
     display: flex;
     align-items: center;
-    padding: 1em .5em;
-    margin-bottom: .5em;
+    padding: 2.5em .5em .5em .5em;
     border-radius: 50px;
 }
 .type{
