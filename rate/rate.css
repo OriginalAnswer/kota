@@ -54,7 +54,7 @@ header{
 }
 #title p:nth-child(1){
     font-family: serif;
-    font-size: 4.5rem;
+    font-size: 4rem;
     text-align: left;
     font-weight: bold;
 }
@@ -70,12 +70,12 @@ header{
 /* 메인폰트 미쿼리 사이즈 */
 @media screen and (max-width: 380px) {
     #title p:nth-child(1){
-        font-size: 4rem;
+        font-size: 3rem;
         text-align: center;
         letter-spacing: 0rem;
     }
     #title p:nth-last-child(1){
-        font-size: 3rem;
+        font-size: 4rem;
         text-align: center;
         letter-spacing: .5rem;
     }
