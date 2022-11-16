@@ -6,6 +6,18 @@
     /* border: var(--border-basic); */
     /* border-radius: var(--border-basic-radius); */
 }
+input,
+button{
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+            height: auto; 
+            line-height: normal; 
+            padding: .8em .5em;
+            outline: none;
+            border: none;
+    background-color: #ffffff00;
+}
 
 input[type="radio"]{
     /* display: none; */
@@ -215,9 +227,30 @@ body{
     cursor: pointer;
 }
 
+/* 스케줄 */
+.schadule{
+    max-height: 180px;
+    overflow: scroll;
+    padding: 25px 10px;
+    border: #000 dashed;
+    border-radius: 50px;
+}
+.schadule article{
+    display: flex;
+    flex-wrap: nowrap;
+    border-bottom: rgb(0, 0, 0) solid;
+}
+.schadule article section{
+    padding: 3px 0;
+    font-family: 'jua';
+}
+.schadule article section:nth-child(1){
+    width: 20%;
+}
+.schadule article section:nth-last-child(1){
+    width: 80%;
 
-
-
+}
 
 
 
