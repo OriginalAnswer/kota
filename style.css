@@ -127,7 +127,7 @@ body{
     font-size: 1.5rem;
 }
 #main-s2-footer{
-    font-size: .5rem;
+    font-size: .8rem;
 }
 
 /*  */
@@ -232,13 +232,14 @@ body{
     max-height: 180px;
     overflow: scroll;
     padding: 25px 10px;
-    border: #000 dashed;
+    border: #000 dashed 3px;
     border-radius: 50px;
 }
 .schadule article{
+    font-size: 1.2rem;
     display: flex;
     flex-wrap: nowrap;
-    border-bottom: rgb(0, 0, 0) solid;
+    border-bottom: rgb(0, 0, 0) solid 3px;
 }
 .schadule article section{
     padding: 3px 0;
