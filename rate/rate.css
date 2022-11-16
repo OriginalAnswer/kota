@@ -97,10 +97,9 @@ header{
     margin-bottom: 10px;
 }
 .rate-header{
-    margin-bottom: 10px;
+    padding: 5px;
 }
 .rate-header span{
-    margin-bottom: 10px;
     font-family: 'Jua';
     font-size: 1.5rem;
 }
