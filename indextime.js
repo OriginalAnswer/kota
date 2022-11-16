@@ -14,8 +14,8 @@ getDateMain();
 const tt = document.getElementById('main-s1-thistime-time');
 function getThistime(){
     const date = new Date();
-    // var kota_offset = 4*60;//로컬 +4시간 세팅 (한국기준 코타키나발루 시간)
-    // var kota_offset = -(4*60); //로컬 -4시간 세팅
+    // var kota_offset = 60;//로컬 +1시간 세팅 (한국기준 코타키나발루 시간)
+    // var kota_offset = -60; //로컬 -1시간 세팅
     // date.setMinutes(date.getMinutes()+kota_offset);
     const h = String(date.getHours()).padStart(2,"0");
     const m = String(date.getMinutes()).padStart(2,"0");

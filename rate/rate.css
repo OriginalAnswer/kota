@@ -1,32 +1,25 @@
-@import url(/checklist/checklist.css);
-@import url(/rate.css);
-:root{
-    --bg-clr-white: #ffffff;
-    --bg-clr-main: rgb(255, 255, 255);
-    --bg-clr-form: rgb(137, 160, 139);
-    --bg-clr-title:rgb(105, 185, 112);
-    --bg-clr-printview: rgb(194, 241, 198);
-    --bg-clr-singletodo: rgb(225, 241, 194);
-    --clr: #000;
-    --clr-title: #2382ff;
-    --clr-input-placeholder:#2382ffc4;
-    --boxShadow:5px 5px 10px #e0e0e0,
-                -5px -5px 10px #ffffff;
-                --boxShadow-inset:inset 5px 5px 10px #e0e0e0,
-                inset -5px -5px 10px #ffffff;
-                --border-radius: 50px;
-                --border-basic:#000 3px solid;
-                --border-basic-radius: 20px;
-            }
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif,'Bodoni Moda', 'Gauon Dodum', 'Jua', serif;
-    /* border: var(--border-basic); */
-    /* border-radius: var(--border-basic-radius); */
+    font-family: sans-serif,'Bodoni Moda', 'Gauon Dodum', 'Jua','Forum', serif;
 }
-
+input,
+button{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: auto; 
+    line-height: normal; 
+    padding: .8em .5em;
+    outline: none;
+    border: none;
+    background-color: #ffffff00;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
 html{
     width: 100vw;height: 100vh;
 }
@@ -36,80 +29,119 @@ body{
     padding: .8em .5em;
     text-align: center;
 }
-.d{
+.main{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden;
+    overflow: scroll;
     padding: 10px;
 }
-.d-s1{
+header{
     padding-top: 10px;
     margin-bottom: 20px;
 }
-.d-s1,
-.d-header,
-.d-header >p{
+
+#header,
+#title,
+#title >p{
     width: 100%;
     display: block;
 }
-.d-nav{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content:space-between;
-}
-.d-header{
+#title{
     border-top: 1px solid #000;
     border-bottom: 5px solid #000;
 }
-.d-header p:nth-child(1){
+#title p:nth-child(1){
     font-family: serif;
-    font-size: 6.5rem;
+    font-size: 4.5rem;
     text-align: left;
     font-weight: bold;
-    letter-spacing: 1.2rem;
 }
-
+#title p:nth-last-child(1){
+    font-family: 'Forum';
+    font-size: 4rem;
+    text-align: right;
+    font-weight:lighter;
+    position: relative;
+    top: -8px;
+    letter-spacing: .6rem;
+}
 /* 메인폰트 미쿼리 사이즈 */
 @media screen and (max-width: 380px) {
-    .d-header p:nth-child(1){
+    #title p:nth-child(1){
         font-size: 5rem;
         text-align: center;
         letter-spacing: 0rem;
     }
-    /* .d-header p:nth-last-child(1){
+    #title p:nth-last-child(1){
         font-size: 3rem;
         text-align: center;
         letter-spacing: .5rem;
-    } */
-}
-.d-nav{
-    font-size: 1.15rem;
-}
-.d-nav span:nth-child(2){
-    text-indent: 1em;
+    }
 }
 
 
 /*  */
-.d-s2{
+.rate-boxes-container{
     width: 100%;
     margin-bottom:10px;
 }
-.d-s2-boxing{
+.rate-box{
     height: 100%;
     padding: 15px 20px;
     border: 1px solid #000;
     border-radius: 50px;
-}
-.d-content{
+    display: flex;
+    flex-direction: column;
     margin-bottom: 10px;
 }
-.d-content span{
+.rate-header{
     margin-bottom: 10px;
-    /* font-family: 'Jua'; */
-    font-size: 1.2rem;
+}
+.rate-header span{
+    margin-bottom: 10px;
+    font-family: 'Jua';
+    font-size: 1.5rem;
+}
+.rate-printview{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 0.5em;
+    border: 1px solid #000;
+    border-radius: 50px;
+}
+
+.type{
+    width: 100%;
+    /* padding: 0.5em; */
+    border: 1px solid #000;
+    border-radius: 50px;
+}
+#type-form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid #000;
+    border-radius: 50px; */
+}
+#type-input{
+    width: 100%;
+    font-size: 1.2em;
+    font-family: 'Gauon Dodum', 'Jua';
+}
+#type-input::placeholder{
+    font-size: .8em;
+}
+
+
+
+
+
+
+
+
+/*  */
+.dp-none{
+    display: none;
 }
