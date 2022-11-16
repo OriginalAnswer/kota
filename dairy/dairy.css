@@ -6,7 +6,7 @@
     /* border: var(--border-basic); */
     /* border-radius: var(--border-basic-radius); */
 }
-
+.hidden{display: none;}
 html{
     width: 100vw;height: 100vh;
 }
@@ -16,7 +16,7 @@ body{
     padding: .8em .5em;
     text-align: center;
 }
-.d{
+.dairy-box{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -24,13 +24,12 @@ body{
     overflow: hidden;
     padding: 10px;
 }
-.d-s1{
+.dairy-header{
     padding-top: 10px;
     margin-bottom: 20px;
 }
-.d-s1,
-.d-header,
-.d-header >p{
+.dairy-header,
+.dairy-header >p{
     width: 100%;
     display: block;
 }
@@ -41,11 +40,11 @@ body{
     flex-wrap: nowrap;
     justify-content:space-between;
 }
-.d-header{
+.dairy-header{
     border-top: 1px solid #000;
     border-bottom: 5px solid #000;
 }
-.d-header p:nth-child(1){
+.dairy-header p:nth-child(1){
     font-family: serif;
     font-size: 6.5rem;
     font-weight: bold;
@@ -58,7 +57,7 @@ body{
 
 /* 메인폰트 미쿼리 사이즈 */
 @media screen and (max-width: 380px) {
-    .d-header p:nth-child(1){
+    .dairy-header p:nth-child(1){
         font-size: 5rem;
         text-align: center;
         letter-spacing: 0rem;
@@ -69,29 +68,21 @@ body{
         letter-spacing: .5rem;
     } */
 }
-.d-nav{
-    font-size: 1.15rem;
-}
-.d-nav span:nth-child(2){
-    text-indent: 1em;
-}
-
-
 /*  */
-.d-s2{
-    width: 100%;
-    margin-bottom:10px;
+article{
 }
-.d-s2-boxing{
+article{
+    width: 100%;
     height: 100%;
     padding: 15px 20px;
+    margin-bottom:10px;
     border: 1px solid #000;
     border-radius: 50px;
 }
-.d-content{
+.rate-printview{
     margin-bottom: 10px;
 }
-.d-content span{
+.rate-printview span{
     margin-bottom: 10px;
     /* font-family: 'Jua'; */
     font-size: 1.2rem;
