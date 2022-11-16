@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif,'Bodoni Moda', 'Gauon Dodum', 'Jua','Forum', serif;
+    /* border: var(--border-basic); */
+    /* border-radius: var(--border-basic-radius); */
+}
+
+html{
+    width: 100vw;height: 100vh;
+}
+body{
+    width: 100%;height: 100%;
+    background-color: var(--bg-clr-main);
+    padding: .8em .5em;
+    text-align: center;
+}
+
+#main-s2{
+    width: 100%;
+    height: 100%;
+    margin-bottom:10px;
+    /* padding: 0 5px; */
+}
+#main-s2-boxing{
+    height: 100%;
+    padding: 15px 20px;
+    border: 1px solid #000;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#main-s2-header{
+    margin-bottom: 10px;
+}
+#main-s2-header span{
+    margin-bottom: 10px;
+    font-family: 'Jua';
+    font-size: 1.5rem;
+}
+#main-s2-footer{
+    font-size: .5rem;
+}
+
+/* 스케줄 */
+.schadule{
+    max-height: 180px;
+    overflow: scroll;
+    padding: 25px 10px;
+    border: #000 dashed;
+    border-radius: 50px;
+}
+.schadule article{
+    display: flex;
+    flex-wrap: nowrap;
+    border-bottom: rgb(0, 0, 0) solid;
+}
+.schadule article section{
+    padding: 3px 0;
+    font-family: 'jua';
+}
+.schadule article section:nth-child(1){
+    width: 20%;
+}
+.schadule article section:nth-last-child(1){
+    width: 80%;
+
+}
+
+
