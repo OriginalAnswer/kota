@@ -35,7 +35,7 @@ window.addEventListener('DOMContentLoaded', async () => {
             const typeInfo1 = doc.data();
             html += `
                 <div class="single-rate" id="single-rate">
-                    <span class="rate-text" id="rate-text">${typeInfo1.text}<span class="delete-btn" data-id="${doc.id}">${savedName}</span></span>
+                    <span class="rate-text" id="rate-text">${typeInfo1.text}<span class="delete-btn" data-id="${doc.id}">${typeInfo1.sn}</span></span>
                 </div>
                     `
                 });
@@ -60,7 +60,8 @@ window.addEventListener('DOMContentLoaded', async () => {
         const sc = String(date.getSeconds()).padStart(2,"0");
         let createTime = y+m+d+hr+mn+sc; 
         const statu = "active";
-        saveRate1(input1.value,statu,createTime);
+        const sn = localStorage.getItem(NAME);
+        saveRate1(input1.value,statu,createTime,sn);
         form1.reset();
     })
 //---------------------------------------------------------------------------------------------
@@ -70,7 +71,7 @@ window.addEventListener('DOMContentLoaded', async () => {
             const typeInfo2 = doc.data();
             html += `
             <div class="single-rate" id="single-rate">
-            <span class="rate-text" id="rate-text">${typeInfo2.text}<span class="delete-btn" data-id="${doc.id}">${savedName}</span></span>
+            <span class="rate-text" id="rate-text">${typeInfo2.text}<span class="delete-btn" data-id="${doc.id}">${typeInfo2.sn}</span></span>
         </div>
                     `
                 });
@@ -95,7 +96,8 @@ window.addEventListener('DOMContentLoaded', async () => {
         const sc = String(date.getSeconds()).padStart(2,"0");
         let createTime = y+m+d+hr+mn+sc; 
         const statu = "active";
-        saveRate2(input2.value,statu,createTime);
+        const sn = localStorage.getItem(NAME);
+        saveRate2(input2.value,statu,createTime,sn);
         form5.reset();
     })
 //---------------------------------------------------------------------------------------------
@@ -108,7 +110,7 @@ window.addEventListener('DOMContentLoaded', async () => {
                     <span class="rate-text" id="rate-text">
                     ${typeInfo3.text}
                     <span class="delete-btn" data-id="${doc.id}">
-                    ${savedName}</span></span>
+                    ${typeInfo3.sn}</span></span>
                 </div>
                     `
                 });
@@ -133,7 +135,8 @@ window.addEventListener('DOMContentLoaded', async () => {
         const sc = String(date.getSeconds()).padStart(2,"0");
         let createTime = y+m+d+hr+mn+sc; 
         const statu = "active";
-        saveRate3(input3.value,statu,createTime);
+        const sn = localStorage.getItem(NAME);
+        saveRate3(input3.value,statu,createTime,sn);
         form3.reset();
     })
 //---------------------------------------------------------------------------------------------
@@ -144,7 +147,7 @@ window.addEventListener('DOMContentLoaded', async () => {
             html += `
                 <div class="single-rate" id="single-rate">
                     <span class="rate-text" id="rate-text">
-                    ${typeInfo4.text}<span class="delete-btn" data-id="${doc.id}">${savedName}</span></span>
+                    ${typeInfo4.text}<span class="delete-btn" data-id="${doc.id}">${typeInfo4.sn}</span></span>
                 </div>
                     `
                 });
@@ -169,7 +172,8 @@ window.addEventListener('DOMContentLoaded', async () => {
         const sc = String(date.getSeconds()).padStart(2,"0");
         let createTime = y+m+d+hr+mn+sc; 
         const statu = "active";
-        saveRate4(input4.value,statu,createTime);
+        const sn = localStorage.getItem(NAME);
+        saveRate4(input4.value,statu,createTime,sn);
         form4.reset();
     })
 //---------------------------------------------------------------------------------------------
@@ -179,7 +183,7 @@ window.addEventListener('DOMContentLoaded', async () => {
             const typeInfo5 = doc.data();
             html += `
                 <div class="single-rate" id="single-rate">
-                    <span class="rate-text" id="rate-text">${typeInfo5.text}<span class="delete-btn" data-id="${doc.id}">${savedName}</span></span>
+                    <span class="rate-text" id="rate-text">${typeInfo5.text}<span class="delete-btn" data-id="${doc.id}">${typeInfo5.sn}</span></span>
                 </div>
                     `
                 });
@@ -204,7 +208,8 @@ window.addEventListener('DOMContentLoaded', async () => {
         const sc = String(date.getSeconds()).padStart(2,"0");
         let createTime = y+m+d+hr+mn+sc; 
         const statu = "active";
-        saveRate5(input5.value,statu,createTime);
+        const sn = localStorage.getItem(NAME);
+        saveRate5(input5.value,statu,createTime,sn);
         form5.reset();
     })
 //---------------------------------------------------------------------------------------------
@@ -214,7 +219,7 @@ window.addEventListener('DOMContentLoaded', async () => {
             const typeInfo6 = doc.data();
             html += `
                 <div class="single-rate" id="single-rate">
-                    <span class="rate-text" id="rate-text">${typeInfo6.text}<span class="delete-btn" data-id="${doc.id}">${savedName}</span></span>
+                    <span class="rate-text" id="rate-text">${typeInfo6.text}<span class="delete-btn" data-id="${doc.id}">${typeInfo6.sn}</span></span>
                 </div>
                     `
                 });
@@ -240,7 +245,8 @@ form6.addEventListener('submit', (e) => {
     const mn = String(date.getMinutes()).padStart(2,"0");
     const sc = String(date.getSeconds()).padStart(2,"0");
     let createTime = y+m+d+hr+mn+sc; 
+    const sn = localStorage.getItem(NAME);
     const statu = "active";
-    saveRate6(input6.value,statu,createTime);
+    saveRate6(input6.value,statu,createTime,sn);
     form6.reset();
 })
