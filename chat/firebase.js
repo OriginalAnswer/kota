@@ -4,7 +4,7 @@ import {
     collection,
     // addDoc,
     setDoc,
-    // getDocs,
+
     onSnapshot,
     deleteDoc,
     doc
@@ -22,7 +22,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore();
 
-export const saveTodo = (text, statu, when) => setDoc(doc(db, "todo-list", when), {text,statu,when});
+export const saveTodo = (text, statu, when,sn) => setDoc(doc(db, "todo-list", when), {text,statu,when,sn});
 // export const getTodo = () => getDocs(collection(db,'todo-list'));
 export const onGetTodo = (callback) => onSnapshot(collection(db, 'todo-list'), callback);
 export const deleteTodo = id => deleteDoc(doc(db, 'todo-list', id));

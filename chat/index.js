@@ -24,9 +24,10 @@ window.addEventListener('DOMContentLoaded', async () => {
             // const mn = String(date.getMinutes()).padStart(2,"0");
 
             const typeInfo = doc.data();
+            
             html += `
                 <div class="single-chat" id="single-chat">
-                    <div class="chat-name" id="chat-name">${savedName}</div>
+                    <div class="chat-name" id="chat-name">${typeInfo.sn}</div>
                     <span class="chat-text" id="chat-text">
                     ${typeInfo.text}
                     <span class="delete-btn" data-id="${doc.id}">x</span>
@@ -35,7 +36,6 @@ window.addEventListener('DOMContentLoaded', async () => {
                 </div>
                     `
                 });
-                // <span class="chat-time" id="chat-time">${hr}:${mn}</span>
         chatsView.innerHTML = html;
 
         const deleteBtns = document.querySelectorAll('.delete-btn');
@@ -59,7 +59,8 @@ typeForm.addEventListener('submit', (e) => {
     const mn = String(date.getMinutes()).padStart(2,"0");
     const sc = String(date.getSeconds()).padStart(2,"0");
     let createTime = y+m+d+hr+mn+sc; 
+    const sn = localStorage.getItem(NAME);
     const statu = "active";
-    saveTodo(typeInput.value,statu,createTime);
+    saveTodo(typeInput.value,statu,createTime,sn);
     typeForm.reset();
 })
