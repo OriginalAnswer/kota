@@ -1,6 +1,6 @@
 const pv = document.getElementById('main-s2-schadule');
 function setSchadule(){
-    let dd = document.getElementById('dday')
+    const dd = document.getElementById('dday')
     if (dd = "DAY1") {
         pv.innerHTML = `
     <article>
