@@ -43,7 +43,7 @@ if(savedName !== null){
 }
 
 function delName(){
-    localStorage.removeItem(NAME)
+    localStorage.removeItem(NAME);
     scd.classList.add('hidden');
     scdFtr.classList.add('hidden');
     n.style.display = 'flex';
