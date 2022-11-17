@@ -1,6 +1,7 @@
 const NAME = 'name';
 const savedName = localStorage.getItem(NAME);
 const scd = document.getElementById('main-s2-schadule');
+const m3 = document.getElementById('main-s3-boxing');
 const scdFtr = document.getElementById('main-s2-footer');
 const n = document.getElementById('name');
 
@@ -38,4 +39,13 @@ if(savedName !== null){
     n.style.display = 'none';
     scd.classList.remove('hidden');
     scdFtr.classList.remove('hidden');
+    // m3.classList.remove('hidden');
+}
+
+function delName(){
+    localStorage.removeItem(NAME)
+    scd.classList.add('hidden');
+    scdFtr.classList.add('hidden');
+    n.style.display = 'flex';
+    location.reload()
 }

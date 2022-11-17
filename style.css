@@ -129,6 +129,10 @@ body{
 #main-s2-footer{
     font-size: .8rem;
 }
+#main-s2-footer a{
+    margin: 0 30px;
+    font-family: 'jua';
+}
 
 /*  */
 /* #main-s1,
