@@ -1,6 +1,6 @@
 const pv = document.getElementById('main-s2-schadule');
 function setSchadule(){
-    const dd = document.getElementById('dday')
+    let dd = document.getElementById('dday').innerText();
     if (dd = "DAY1") {
         pv.innerHTML = `
     <article>
@@ -105,6 +105,9 @@ function setSchadule(){
     <section>06:00</section>
     <section>귀국(인천공항)/한국 도착!</section>
 </article>
+        `
+    }else{
+        pv.innerHTML = `여행 끝 ㅠㅠ
         `
     }
 };
